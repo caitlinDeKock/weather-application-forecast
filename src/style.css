@@ -127,6 +127,30 @@ header {
   font-weight: bold;
 }
 
+.weather-forecast {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.weather-forecast-data {
+  border: 1px solid #c994cd;
+  border-radius: 10%;
+  box-shadow: 10px 11px 14px 1px rgba(36, 31, 98, 0.2);
+  padding: 15px;
+  font-size: 15px;
+}
+
+.weather-forecast-day {
+  opacity: 0.7;
+}
+
+.weather-forecast-temp-min {
+  opacity: 0.7;
+}
+
 footer {
   border-top: 1px solid #c994cd;
   padding: 5px 0 0 0;
