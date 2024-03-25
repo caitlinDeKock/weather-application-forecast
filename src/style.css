@@ -1,0 +1,136 @@
+body {
+  background: linear-gradient(
+    88.7deg,
+    rgb(207, 150, 207) -2.4%,
+    rgb(107, 116, 179) 102%
+  );
+  font-family: "Roboto Mono", monospace;
+}
+
+a {
+  color: #9ca2ff;
+}
+
+.weather-app {
+  background: linear-gradient(
+    179.2deg,
+    rgb(36, 31, 98) 0%,
+    rgb(95, 5, 134) 63.4%,
+    rgb(121, 45, 129) 100%
+  );
+  max-width: 600px;
+  margin: 50px auto;
+  box-shadow: 10px 11px 14px 1px rgba(36, 31, 98, 0.2);
+  border-radius: 20px;
+  padding: 30px;
+}
+
+header {
+  padding: 0 0 20px 0;
+}
+
+.search-form-input {
+  background-color: #f1dcf2;
+  border-radius: 15px;
+  width: 75%;
+  padding: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #291d65;
+}
+
+.search-form-button {
+  background-color: #cf96cf;
+  margin-left: 30px;
+  padding: 5px 30px;
+  border: none;
+  border-color: #291d65;
+  border-radius: 15px;
+  color: #291d65;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.container-1 {
+  text-align: center;
+  color: white;
+}
+
+.city {
+  margin: 0;
+  font-size: 40px;
+}
+
+.weather-time {
+  font-weight: 300;
+  font-size: 15px;
+}
+
+.container-x {
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  padding: 0px 160px;
+}
+
+.weather-icon {
+  position: relative;
+  top: -15px;
+  width: 100px;
+  height: 100px;
+}
+
+.container-3 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.container-y {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.weather-description {
+  font-weight: 300;
+  font-size: 15px;
+}
+
+.container-3 {
+  text-align: center;
+}
+
+.container-4 {
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 300px;
+  border: 1px solid #c994cd;
+  box-shadow: 10px 11px 14px 1px rgba(36, 31, 98, 0.2);
+  margin: 0 auto;
+  margin-bottom: 30px;
+  padding: 20px 0px;
+  border-radius: 20px;
+}
+
+.weather-humidity {
+  text-align: center;
+  width: 72px;
+}
+
+.weather-wind {
+  text-align: center;
+}
+
+.weather-data {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+footer {
+  border-top: 1px solid #c994cd;
+  padding: 5px 0 0 0;
+  text-align: center;
+  font-size: 12px;
+  color: #f1dcf2;
+}

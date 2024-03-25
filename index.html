@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Weather Application</title>
+  </head>
+  <body>
+    <div class="weather-app">
+      <header>
+        <form id="search-form">
+          <input
+            type="search"
+            placeholder="Enter a city..."
+            required
+            class="search-form-input"
+            id="search-form-input"
+          />
+          <input type="submit" value="Search" class="search-form-button" />
+        </form>
+      </header>
+      <main>
+        <div class="container-1">
+          <h1 class="city" id="city"></h1>
+          <div class="weather-time" id="weather-time"></div>
+        </div>
+        <div class="container-x">
+          <div class="container-2">
+            <div id="weather-icon">
+              <img
+                src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png"
+                alt=""
+                class="weather-icon"
+              />
+            </div>
+          </div>
+          <div class="container-3">
+            <div class="container-y">
+              <div class="weather-temperature" id="weather-temperature"></div>
+              <div class="weather-unit">°C</div>
+            </div>
+            <div class="weather-description" id="weather-description"></div>
+          </div>
+        </div>
+        <div class="container-4">
+          <div class="weather-humidity">
+            💧
+            <div class="weather-data" id="weather-humidity"></div>
+          </div>
+          <div class="weather-wind">
+            💨
+            <div class="weather-data" id="weather-wind"></div>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <p>
+          Coded by
+          <a href="https://github.com/caitlinDeKock" target="_blank"
+            >Caitlin De Kock,</a
+          >
+          is
+          <a
+            href="https://github.com/caitlinDeKock/shecodes-weather-application"
+            target="_blank"
+            >open-sourced on GitHub</a
+          >
+          and
+          <a
+            href="https://cool-weather-application.netlify.app/"
+            target="_blank"
+            >hosted on Netlify.</a
+          >
+        </p>
+      </footer>
+      <script src="src/index.js"></script>
+    </div>
+  </body>
+</html>
