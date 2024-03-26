@@ -22,7 +22,7 @@ a {
   margin: 50px auto;
   box-shadow: 10px 11px 14px 1px rgba(36, 31, 98, 0.2);
   border-radius: 20px;
-  padding: 30px;
+  padding: 40px;
 }
 
 header {
@@ -139,8 +139,12 @@ header {
   border: 1px solid #c994cd;
   border-radius: 10%;
   box-shadow: 10px 11px 14px 1px rgba(36, 31, 98, 0.2);
-  padding: 15px;
-  font-size: 15px;
+  padding: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 14px;
+  max-width: 85px;
+  max-height: 115px;
 }
 
 .weather-forecast-day {
