@@ -18,7 +18,7 @@ a {
     rgb(95, 5, 134) 63.4%,
     rgb(121, 45, 129) 100%
   );
-  max-width: 600px;
+  max-width: 700px;
   margin: 50px auto;
   box-shadow: 10px 11px 14px 1px rgba(36, 31, 98, 0.2);
   border-radius: 20px;
@@ -71,7 +71,7 @@ header {
   display: flex;
   justify-content: space-evenly;
   margin-top: 20px;
-  padding: 0px 160px;
+  padding: 0px 200px;
 }
 
 .weather-icon {
@@ -109,13 +109,13 @@ header {
   box-shadow: 10px 11px 14px 1px rgba(36, 31, 98, 0.2);
   margin: 0 auto;
   margin-bottom: 30px;
-  padding: 20px 0px;
+  padding: 15px 0px;
   border-radius: 20px;
 }
 
 .weather-humidity {
   text-align: center;
-  width: 72px;
+  width: 81px;
 }
 
 .weather-wind {
@@ -143,8 +143,8 @@ header {
   margin-left: 5px;
   margin-right: 5px;
   font-size: 14px;
-  max-width: 85px;
-  max-height: 115px;
+  max-width: max-content;
+  max-height: max-content;
 }
 
 .weather-forecast-day {
