@@ -1,4 +1,5 @@
 function updateWeather(response) {
+  console.log(response.data);
   let temperatureElement = document.querySelector("#weather-temperature");
   let temperature = response.data.temperature.current;
   let cityElement = document.querySelector("#city");
@@ -71,11 +72,11 @@ function getForecast(city) {
 }
 
 function displayForecast(response) {
-  console.log(response.data.daily);
+  console.log(response.data);
   let forecastHtml = "";
 
   response.data.daily.forEach(function (day, index) {
-    if (index < 5) {
+    if (index < 6 && index !== 0) {
       forecastHtml =
         forecastHtml +
         `
