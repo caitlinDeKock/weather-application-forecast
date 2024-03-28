@@ -16,6 +16,8 @@ function updateWeather(response) {
   descriptionElement.innerHTML = response.data.condition.description;
   cityElement.innerHTML = response.data.city;
   temperatureElement.innerHTML = Math.round(temperature);
+
+  getForecast(response.data.city);
 }
 
 function formatDate(date) {
@@ -54,36 +56,54 @@ function search(event) {
   searchCity(searchInput.value);
 }
 
-let searchFormElement = document.querySelector("#search-form");
-searchFormElement.addEventListener("submit", search);
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
-function displayForecast() {
-  let days = ["Wed", "Thu", "Fri", "Sat", "Sun"];
+  return days[date.getDay()];
+}
+
+function getForecast(city) {
+  let apiKey = "fdtba1b75abd823874fca8d73007o460";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric
+`;
+  axios(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastHtml = "";
 
-  days.forEach(function (day) {
-    forecastHtml =
-      forecastHtml +
-      `
+  response.data.daily.forEach(function (day, index) {
+    if (index < 5) {
+      forecastHtml =
+        forecastHtml +
+        `
   <div class="weather-forecast-data">
-    <div class="weather-forecast-day">${day}</div>
+    <div class="weather-forecast-day">${formatDay(day.time)}</div>
     <img
-      src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png"
+      src="${day.condition.icon_url}" 
       alt=""
       class="weather-forecast-icon"
       width="80px"
     />
     <div class="weather-forecast-temp">
       <span class="weather-forecast-temp-max">
-        <strong>12°C</strong>
+      <strong>${Math.round(day.temperature.maximum)}°C</strong>
       </span>
-      |<span class="weather-forecast-temp-min"> 6°C</span>
+      |<span class="weather-forecast-temp-min">${Math.round(
+        day.temperature.minimum
+      )}°C</span>
     </div>
   </div>
   `;
+    }
   });
   let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = forecastHtml;
 }
+
+let searchFormElement = document.querySelector("#search-form");
+searchFormElement.addEventListener("submit", search);
+
 searchCity("Cape Town");
-displayForecast();
