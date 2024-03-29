@@ -108,3 +108,4 @@ let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", search);
 
 searchCity("Cape Town");
+getForecast("Cape Town");
