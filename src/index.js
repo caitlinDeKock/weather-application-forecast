@@ -68,7 +68,7 @@ function getForecast(city) {
   let apiKey = "fdtba1b75abd823874fca8d73007o460";
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric
 `;
-  axios(apiUrl).then(displayForecast);
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function displayForecast(response) {
@@ -108,4 +108,3 @@ let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", search);
 
 searchCity("Cape Town");
-getForecast("Cape Town");
